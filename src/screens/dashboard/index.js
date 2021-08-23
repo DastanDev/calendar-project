@@ -3,6 +3,7 @@ import SideBar from "./SideBar"
 import { Route } from "react-router-dom"
 import Calendar from "../../screens/calendar/index"
 import User from "../../screens/user"
+import Noticas from "../../screens/noticas"
 
 const Dashboard = ({ children, title }) => {
   return (
@@ -12,6 +13,7 @@ const Dashboard = ({ children, title }) => {
         <h2 className="font-bold text-2xl mb-5">{title}</h2>
         <Route exact path="/dashboard/calendar" component={Calendar} />
         <Route exact path="/dashboard/user" component={User} />
+        <Route exact path="/dashboard/noticas" component={Noticas} />
       </div>
     </div>
   )
