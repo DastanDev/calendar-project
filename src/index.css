@@ -5,3 +5,7 @@
 .bg-primary {
   background-color: #114861;
 }
+
+input:checked + svg {
+  display: block;
+}

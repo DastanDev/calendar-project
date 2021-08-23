@@ -1,142 +1,173 @@
-import React from "react";
-import {
-   MDBContainer,
-   MDBRow,
-   MDBCol,
-   MDBCard,
-   MDBCardBody,
-   MDBMask,
-   MDBView,
-   MDBInput,
-   MDBSelect,
-   MDBSelectInput,
-   MDBSelectOption,
-   MDBSelectOptions,
-   MDBBtn,
-   MDBDatePicker,
-} from "mdbreact";
-import styled from "styled-components";
-import Input from "../../StyledCompoents/Input";
-import Select from "../../StyledCompoents/Select";
-import Textarea from "../../StyledCompoents/Textarea";
-import Button from "../../StyledCompoents/Button";
-import "./styles.css";
-import "../../common/styles.css";
-const FormRow = styled.div`
-   display: grid;
-   grid-template-columns: repeat(${(p) => p.items}, 1fr);
-   grid-template-rows: 1fr;
-   gap: 1rem;
-`;
+import React from "react"
+import Input from "../../StyledCompoents/Input"
+import Select from "../../StyledCompoents/Select"
+import Textarea from "../../StyledCompoents/Textarea"
+import Button from "../../StyledCompoents/Button"
 
-const InputsWrapper = styled.div`
-   display: grid;
-   grid-template-rows: repeat(9, 1fr);
-   gap: 1rem;
-`;
+const Register = () => {
+  return (
+    <>
+      <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+        rel="stylesheet"
+      />
 
-const TextboxWrapper = styled.div`
-   display: grid;
-   grid-template-rows: repeat(4, 1fr);
-   gap: 2rem;
-`;
-const Wrapper = styled.div`
-   display: grid;
-   gap: 2rem;
-   grid-template-columns: 1fr 1fr;
-   width: 80%;
-`;
-class Register extends React.Component {
-   submitHandler = (event) => {
-      event.preventDefault();
-      event.target.className += " was-validated";
-   };
+      <div class="bg-gray-300 flex flex-col justify-center w-full h-screen">
+        <div class="flex flex-col sm:flex-row mx-auto">
+          <div class="flex flex-col mb-12 px-5 max-w-xl mx-auto text-sm space-y-1">
+            <input
+              class="px-5 py-2 rounded-sm outline-none"
+              placeholder="Fecha"
+              type="text"
+            />
+            <div class="flex space-x-1">
+              <input
+                class="px-5 w-1/2 py-2 rounded-sm outline-none"
+                placeholder="Fecha"
+                type="text"
+              />
+              <input
+                class="px-5 w-1/2 py-2 rounded-sm outline-none"
+                placeholder="Fecha"
+                type="text"
+              />
+            </div>
+            <div class="flex space-x-1">
+              <select class="w-1/3 rounded-sm h-8" name="select" id="">
+                <option>Departamento</option>
+              </select>
+              <select class="w-1/3 rounded-sm h-8" name="select" id="">
+                <option>Departamento</option>
+              </select>
+              <select class="w-1/3 rounded-sm h-8" name="select" id="">
+                <option>Departamento</option>
+              </select>
+            </div>
+            <div class="flex space-x-1">
+              <input
+                class="px-5 py-2 rounded-sm outline-none w-2/4"
+                placeholder="Cédula de Identidad"
+                type="text"
+              />
+              <select class="w-1/4 rounded-sm" name="select" id="">
+                <option>Extensión</option>
+              </select>
+              <select class="w-1/4 rounded-sm" name="select" id="">
+                <option>Estado Civil</option>
+              </select>
+            </div>
+            <div class="flex space-x0">
+              <input
+                class="px-5 py-2 rounded-sm outline-none w-2/4"
+                placeholder="Fecha de Nacimiento"
+                type="text"
+              />
+              <select class="w-1/4 rounded-sm" name="select" id="">
+                <option>Edad</option>
+              </select>
+              <select class="w-1/4 rounded-sm" name="select" id="">
+                <option>Rango</option>
+              </select>
+            </div>
+            <input
+              class="px-5 py-2 rounded-sm outline-none"
+              placeholder="Profesión / Ocupación"
+              type="text"
+            />
+            <div class="flex space-x-1">
+              <input
+                class="px-5 py-2 rounded-sm outline-none w-1/2"
+                placeholder="Correo Electrónico"
+                type="text"
+              />
+              <input
+                class="px-5 py-2 rounded-sm outline-none w-1/2"
+                placeholder="Teléfono / Celular"
+                type="text"
+              />
+            </div>
+            <input
+              class="px-5 py-2 rounded-sm outline-none"
+              placeholder="Género"
+              type="text"
+            />
+            <input
+              class="px-5 py-2 rounded-sm outline-none"
+              placeholder="Grado Académico"
+              type="text"
+            />
+          </div>
+          <div class="flex flex-col space-y-1 max-h-full h-full mx-5 -mt-10 sm:mt-0">
+            <textarea
+              placeholder="Descripción del Emprendimiento"
+              class="outline-none p-1 rounded-sm"
+              name=""
+              id=""
+              cols="30"
+              rows="3"
+            ></textarea>
+            <textarea
+              placeholder="Descripción del Emprendimiento"
+              class="outline-none p-1 rounded-sm"
+              name=""
+              id=""
+              cols="30"
+              rows="3"
+            ></textarea>
+            <textarea
+              placeholder="Descripción del Emprendimiento"
+              class="outline-none p-1 rounded-sm"
+              name=""
+              id=""
+              cols="30"
+              rows="3"
+            ></textarea>
+            <textarea
+              placeholder="Descripción del Emprendimiento"
+              class="outline-none p-1 rounded-sm"
+              name=""
+              id=""
+              cols="30"
+              rows="3"
+            ></textarea>
+          </div>
+        </div>
+        <div class="px-5 flex space-x-1 mt-5 sm:mt-0 mx-auto">
+          <button class="bg-green-500 px-5 py-1 rounded-sm">Accept</button>
+          <button class="bg-red-500 px-5 py-1 rounded-sm">Cancel</button>
+        </div>
+      </div>
 
-   changeHandler = (event) => {
-      this.setState({ [event.target.name]: event.target.value });
-   };
-
-   render() {
-      return (
-         <div id="register">
-            <MDBView>
-               <MDBMask className="d-flex justify-content-center align-items-center" overlay="gradient">
-                  <MDBContainer className="h-100 d-flex justify-content-center align-items-center">
-                     <MDBRow>
-                        <MDBCol md="12" className="mt-5 mx-auto">
-                           <Wrapper>
-                              <InputsWrapper>
-                                 <FormRow items={1}>
-                                    <Input placeholder="Fecha"></Input>
-                                 </FormRow>
-                                 <FormRow items={2}>
-                                    <Input placeholder="Nombres"></Input>
-                                    <Input placeholder="Apellidos"></Input>
-                                 </FormRow>
-                                 <FormRow items={3}>
-                                    <Select>
-                                       <option value="Departamento">Departamento</option>
-                                    </Select>
-                                    <Select>
-                                       <option value="Departamento">Departamento</option>
-                                    </Select>
-                                    <Select>
-                                       <option value="Departamento">Departamento</option>
-                                    </Select>
-                                 </FormRow>
-                                 <FormRow items={3}>
-                                    <Input placeholder="Cédula de Identidad"></Input>
-                                    <Select>
-                                       <option value="Extensión">Extensión</option>
-                                    </Select>
-                                    <Select>
-                                       <option value="Estado Civil">Estado Civil</option>
-                                    </Select>
-                                 </FormRow>
-                                 <FormRow items={3}>
-                                    <Input placeholder="Fecha de Nacimiento"></Input>
-                                    <Select>
-                                       <option value="Edad">Edad</option>
-                                    </Select>
-                                    <Select>
-                                       <option value="Edad">Rango</option>
-                                    </Select>
-                                 </FormRow>
-                                 <FormRow items={1}>
-                                    <Input placeholder="Profesión / Ocupación"></Input>
-                                 </FormRow>
-                                 <FormRow items={2}>
-                                    <Input placeholder="Correo Electrónico"></Input>
-                                    <Input placeholder="Teléfono / Celular"></Input>
-                                 </FormRow>
-                                 <FormRow items={1}>
-                                    <Input placeholder="Género"></Input>
-                                 </FormRow>
-                                 <FormRow items={1}>
-                                    <Input placeholder="Grado Académico"></Input>
-                                 </FormRow>
-                                 <div style={{ display: "flex", justifyContent: "flex-end" }}>
-                                    <Button style={{ float: "right" }} variant="success">
-                                       Accept
-                                    </Button>
-                                 </div>
-                              </InputsWrapper>
-                              <TextboxWrapper>
-                                 <Textarea>Descripción del Emprendimiento</Textarea>
-                                 <Textarea>Descripción del Emprendimiento</Textarea>
-                                 <Textarea>Descripción del Emprendimiento</Textarea>
-                                 <Textarea>Descripción del Emprendimiento</Textarea>
-                                 <Button variant="danger">Cancel</Button>
-                              </TextboxWrapper>
-                           </Wrapper>
-                        </MDBCol>
-                     </MDBRow>
-                  </MDBContainer>
-               </MDBMask>
-            </MDBView>
-         </div>
-      );
-   }
+      <div class="bg-primary w-full">
+        <footer
+          class="
+        h-44
+        max-w-4xl
+        px-5
+        sm:space-y-0
+        space-y-10
+        justify-center
+        sm:text-xl sm:justify-between
+        flex-col
+        sm:flex-row
+        text-white
+        mx-auto
+        w-full
+        flex
+        place-items-center
+      "
+        >
+          <div class="">© 2021 Copyright: Ventse</div>
+          <div class="space-x-5">
+            <i class="fab fa-linkedin"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-google-plus-g"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
+        </footer>
+      </div>
+    </>
+  )
 }
 
-export default Register;
+export default Register

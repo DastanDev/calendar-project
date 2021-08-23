@@ -1,7 +1,7 @@
 import { MDBCol, MDBContainer, MDBMask, MDBRow, MDBView } from "mdbreact";
 import styled from "styled-components";
 // import LoggedInNavbar from "../../Components/LoggedInNavbar";
-import Sidebar from "../../compoents/Sidebar";
+import Sidebar from "../../components/Sidebar";
 import CalendarPageContent from "./CalendarPageContent";
 
 const Wrapper = styled.div`

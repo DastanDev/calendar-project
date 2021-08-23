@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import UserCard from "../../compoents/UserCard";
+import UserCard from "../../components/UserCard";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import { MDBCol, MDBContainer, MDBMask, MDBRow, MDBView } from "mdbreact";
