@@ -28,7 +28,7 @@ const Login = () => {
 
   useEffect(() => {
     if (user?.email) {
-      history.push("/dashboard")
+      history.push("/dashboard/noticas")
     }
   }, [user])
 
