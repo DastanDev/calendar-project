@@ -1,6 +1,5 @@
 import React from "react"
 import Home from "./containers/Home"
-import HeaderHome from "./containers/HeaderHome"
 import Footer from "./containers/Footer"
 import Login from "./containers/Login"
 import Register from "./containers/Register"
@@ -13,6 +12,7 @@ import es from "./common/translations/es.json"
 import en from "./common/translations/en.json"
 import CalendarPage from "./containers/Calendar"
 import Navbar from "./components/Navbar"
+import Dashboard from "./screens/dashboard/index"
 
 i18n.init({
   interpolation: { escapeValue: false }, // React already does escaping
@@ -40,7 +40,7 @@ function App() {
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/register" component={Register} />
                 <Route exact path="/terms" component={Terms} />
-                <Route exact path="/calendar" component={CalendarPage} />
+                <Route path="/dashboard" component={Dashboard} />
               </div>
               <Footer />
             </React.Fragment>
