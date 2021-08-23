@@ -4,7 +4,7 @@ import UserCard from "../../components/UserCard"
 
 const index = () => {
   return (
-    <div className="flex flex-col lg:flex-row p-5 justify-evenly">
+    <div className="flex flex-col lg:flex-row lg:space-x-5 p-5 bg-gray-100 justify-evenly place-items-center ">
       <UserCard
         name="John Doe"
         email="johnDoe@gmail.com"

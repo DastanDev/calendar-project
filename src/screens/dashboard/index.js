@@ -3,11 +3,11 @@ import SideBar from "./SideBar"
 import { Route } from "react-router-dom"
 import Calendar from "../../screens/calendar/index"
 import User from "../../screens/user"
-import Noticas from "../../screens/noticas"
+import Noticas from "../../screens/noticas/index"
 
 const Dashboard = ({ children, title }) => {
   return (
-    <div className="flex fixed w-full">
+    <div className="flex w-full">
       <SideBar />
       <div className="flex bg-gray-100 flex-col p-5 w-full min-h-screen overflow-scroll">
         <h2 className="font-bold text-2xl mb-5">{title}</h2>
