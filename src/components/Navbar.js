@@ -22,6 +22,10 @@ const Navbar = () => {
             <Link to="/" className="flex place-items-center">
               CONTACT US
             </Link>
+            <div>|</div>
+            <Link to="/terms" className="flex place-items-center">
+              TERMS
+            </Link>
           </div>
           <i className="fas sm:invisible sm:hidden fa-bars text-xl cursor-pointer"></i>
           <div className="sm:flex hidden place-items-center space-x-4">
