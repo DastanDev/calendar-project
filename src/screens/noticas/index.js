@@ -1,6 +1,5 @@
 import React from "react"
 import UserCard from "../../components/UserCard"
-import CourseItem from "../../components/noticas/CourseItem"
 
 const index = () => {
   return (

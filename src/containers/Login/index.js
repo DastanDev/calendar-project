@@ -1,6 +1,37 @@
-import React from "react"
+import React, { useContext, useEffect, useState } from "react"
+import axios from "axios"
+import { UserContext } from "../../contexts/UserContext"
+import { baseUrl } from "../../baseUrl"
+import { useHistory } from "react-router-dom"
 
 const Login = () => {
+  const [inputs, setInputs] = useState({ email: "", password: "" })
+  const { login, user } = useContext(UserContext)
+  const [error, setError] = useState("")
+  const history = useHistory()
+
+  const submitHandler = async (e) => {
+    e.preventDefault()
+    try {
+      const { data } = await axios({
+        method: "POST",
+        url: `${baseUrl}/user/login`,
+        data: inputs,
+      })
+      if (data) {
+        login(data.email, data.token)
+      }
+    } catch (error) {
+      setError(error.message)
+    }
+  }
+
+  useEffect(() => {
+    if (user?.email) {
+      history.push("/dashboard")
+    }
+  }, [user])
+
   return (
     <>
       <div class="bg-gray-300 flex flex-col justify-center w-full h-screen">
@@ -15,8 +46,14 @@ const Login = () => {
                   Porfavor Inicia Sesión
                 </p>
               </div>
-              <div class="flex flex-col mb-12 px-10 space-y-9">
+              <form
+                onSubmit={submitHandler}
+                class="flex flex-col mb-12 px-10 space-y-9"
+              >
                 <div class="flex flex-col space-y-10">
+                  <div className="text-left text-red-500 -mb-5 mt-4">
+                    {error}
+                  </div>
                   <h2
                     class="font-semibold text-md sm:text-lg mt-5 -mb-7 self-start"
                     for="correo "
@@ -26,8 +63,11 @@ const Login = () => {
                   <input
                     class="w-full text-xs sm:text-sm border-b-2 border-gray-500 outline-none"
                     placeholder="Ingrese su correo electrónico"
-                    type="text"
-                    id="correo"
+                    type="email"
+                    onChange={(e) =>
+                      setInputs((prev) => ({ ...prev, email: e.target.value }))
+                    }
+                    value={inputs.email}
                   />
                 </div>
                 <div class="flex flex-col space-y-10">
@@ -42,6 +82,13 @@ const Login = () => {
                     placeholder="Ingrese su correo electrónico"
                     type="text"
                     id="correo"
+                    onChange={(e) =>
+                      setInputs((prev) => ({
+                        ...prev,
+                        password: e.target.value,
+                      }))
+                    }
+                    value={inputs.password}
                   />
                 </div>
                 <label class="flex justify-start items-start scale-90 self-start">
@@ -56,16 +103,19 @@ const Login = () => {
                   </div>
                   <div class="select-none textxs">Recordarme</div>
                 </label>
-                <div class="flex px-5 bg-blue-500 w-max mt-5 rounded-md text-sm py-1 text-white font-light hover:bg-blue-600 duration-200 transition-colors cursor-pointer bg-primary">
+                <button
+                  type="submit"
+                  class="flex px-5 bg-blue-500 w-max mt-5 rounded-md text-sm py-1 text-white font-light hover:bg-blue-600 duration-200 transition-colors cursor-pointer bg-primary"
+                >
                   INICIAR
-                </div>
+                </button>
                 <div class="text-xs text-gray-400 pb-16">
                   Aún no eres parte del BDP?{" "}
                   <span class="text-black font-bold ml-1">
                     <a href="/register">POSTULAR</a>
                   </span>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
