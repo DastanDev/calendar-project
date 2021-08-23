@@ -7,11 +7,6 @@ import Button from "../../StyledCompoents/Button"
 const Register = () => {
   return (
     <>
-      <link
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-        rel="stylesheet"
-      />
-
       <div class="bg-gray-300 flex flex-col justify-center w-full h-screen">
         <div class="flex flex-col sm:flex-row mx-auto">
           <div class="flex flex-col mb-12 px-5 max-w-xl mx-auto text-sm space-y-1">

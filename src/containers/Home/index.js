@@ -8,11 +8,6 @@ import PostItem from "../../components/PostItem"
 const Home = () => {
   return (
     <>
-      <link
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-        rel="stylesheet"
-      />
-
       <div className="relative bg-primary h-96 p-5 text-white">
         <div className=" absolute flex flex-col left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-32 text-4xl sm:text-5xl font-bold text-center ">
           <h2>BANCO DE DESARROLLO PRODUCTIVO</h2>

@@ -1,18 +1,17 @@
 import React from "react"
 import SideBar from "./SideBar"
-import { BrowserRouter as Router, Switch } from "react-router-dom"
 import { Route } from "react-router-dom"
 import Calendar from "../../screens/calendar/index"
+import User from "../../screens/user"
 
 const Dashboard = ({ children, title }) => {
   return (
-    <div className="flex">
+    <div className="flex fixed w-full">
       <SideBar />
-      <div className="flex bg-gray-100 flex-col p-5 w-full min-h-screen">
+      <div className="flex bg-gray-100 flex-col p-5 w-full min-h-screen overflow-scroll">
         <h2 className="font-bold text-2xl mb-5">{title}</h2>
-        <Router>
-          <Route exact path="/dashboard/calendar" component={Calendar} />
-        </Router>
+        <Route exact path="/dashboard/calendar" component={Calendar} />
+        <Route exact path="/dashboard/user" component={User} />
       </div>
     </div>
   )

@@ -3,11 +3,6 @@ import React from "react"
 const Login = () => {
   return (
     <>
-      <link
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-        rel="stylesheet"
-      />
-
       <div class="bg-gray-300 flex flex-col justify-center w-full h-screen">
         <div class="flex flex-col mb-12 max-w-xl mx-auto w-full text-sm">
           <div class="px-5">

@@ -34,14 +34,17 @@ function App() {
         <BrowserRouter>
           <Switch>
             <React.Fragment>
-              <div id={"content-root"}>
-                <Navbar />
-                <Route exact path="/" component={Home} />
-                <Route exact path="/login" component={Login} />
-                <Route exact path="/register" component={Register} />
-                <Route exact path="/terms" component={Terms} />
-                <Route path="/dashboard" component={Dashboard} />
-              </div>
+              <link
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+                rel="stylesheet"
+              />
+
+              <Navbar />
+              <Route exact path="/" component={Home} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/register" component={Register} />
+              <Route exact path="/terms" component={Terms} />
+              <Route path="/dashboard" component={Dashboard} />
               <Footer />
             </React.Fragment>
           </Switch>
