@@ -1,0 +1,20 @@
+{
+    "topmenu": {
+        "home": "Home",
+        "contactus": "Contact Us",
+        "aboutus": "About Us",
+        "search": "Search",
+        "login": "Login",
+        "register": "Register"
+    },
+    "footer": {
+        "ventse": "Ventse",
+        "copyright": "© 2021 Copyright:",
+        "url": "https://biz.ventse.com/"
+    },
+    "BDP": "BANCO DE DESARROLLO PRODUCTIVO",
+    "Subtitle": "Subtitle",
+    "aboutus": "About Us",
+    "register": "Register",
+    "recentposts": "Recent Posts"
+}
