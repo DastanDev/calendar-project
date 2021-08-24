@@ -1,4 +1,7 @@
 import React from "react"
+import dayjs from "dayjs"
+import relativeTime from "dayjs/plugin/relativeTime"
+dayjs.extend(relativeTime)
 
 const PostItem = ({ title, description, author, tag, date, img }) => {
   return (
@@ -20,10 +23,11 @@ const PostItem = ({ title, description, author, tag, date, img }) => {
         <p className="text-center text-sm">
           By
           <span>
+            {" "}
             <a className="text-blue-600 font-bold" href="/">
               {author}
             </a>
-            , {date}
+            , {dayjs(date).fromNow(true)} ago
           </span>
         </p>
         <button className=" bg-yellow-400 w-max mx-auto mt-2 sm:mx-0 px-5 py-1 text-white shadow-md hover:bg-yellow-500 duration-200 ">

@@ -1,9 +1,28 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import "./styles.css"
 import { withTranslation } from "react-i18next"
 import PostItem from "../../components/PostItem"
+import axios from "axios"
+import { baseUrl } from "../../baseUrl"
 
 const Home = () => {
+  const [news, setNews] = useState([])
+  const [error, setError] = useState("")
+
+  useEffect(() => {
+    const getNewsFromBackend = async () => {
+      try {
+        const { data } = await axios({
+          method: "GET",
+          url: `${baseUrl}/news/get`,
+        })
+        setNews(data)
+      } catch (error) {
+        setError(error.message)
+      }
+    }
+    getNewsFromBackend()
+  }, [])
   return (
     <>
       <div className="relative bg-primary h-96 p-5 text-white">
@@ -32,33 +51,21 @@ const Home = () => {
           proident, sunt in culpa qui officia deserunt mollit anim id est
           laborum.
         </p>
-        <PostItem
-          img="https://mdbootstrap.com/img/Photos/Others/img%20(38).jpg"
-          date="26/08/2016"
-          description="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-          tag="Lifestyle"
-          title="This is title of the news"
-          author="Jessica Clark"
-        />
-        <hr className="my-5" />
-        <PostItem
-          img="https://mdbootstrap.com/img/Photos/Others/forest-sm.jpg"
-          date="26/08/2016"
-          description="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-          tag="Lifestyle"
-          title="This is title of the news"
-          author="Jessica Clark"
-        />
-        <hr className="my-5" />
-        <PostItem
-          img="https://mdbootstrap.com/img/Photos/Others/img (35).jpg"
-          date="26/08/2016"
-          description="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-          tag="Lifestyle"
-          title="This is title of the news"
-          author="Jessica Clark"
-        />
-        <hr className="my-5" />
+        {news?.map((post, _idx) => (
+          <>
+            <PostItem
+              key={post.id}
+              img={post.image}
+              date={Date.now()}
+              description={post.description}
+              tag={post.tag}
+              title={post.title}
+              author="john doe"
+            />
+            <hr className="my-5" />
+          </>
+        ))}
+
         <h2 className="font-bold text-center text-3xl mb-7 mt-2">
           Older Posts
         </h2>

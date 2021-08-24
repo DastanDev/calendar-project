@@ -1,7 +1,9 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Link } from "react-router-dom"
+import { UserContext } from "../contexts/UserContext"
 
 const Navbar = () => {
+  const { user, logout } = useContext(UserContext)
   return (
     <div className="overflow-hidden">
       <div className="bg-primary">
@@ -29,12 +31,20 @@ const Navbar = () => {
           </div>
           <i className="fas sm:invisible sm:hidden fa-bars text-xl cursor-pointer"></i>
           <div className="sm:flex hidden place-items-center space-x-4">
-            <Link className="" to="/login">
-              Login
-            </Link>
-            <Link className="" to="/register">
-              Register
-            </Link>
+            {!user?.email ? (
+              <>
+                <Link className="" to="/login">
+                  Login
+                </Link>
+                <Link className="" to="/register">
+                  Register
+                </Link>
+              </>
+            ) : (
+              <button onClick={logout} className="">
+                Logout
+              </button>
+            )}
           </div>
         </div>
       </div>
