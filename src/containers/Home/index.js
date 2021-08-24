@@ -1,8 +1,6 @@
 import React from "react"
 import "./styles.css"
 import { withTranslation } from "react-i18next"
-import { Link } from "react-router-dom"
-import Navbar from "../../components/Navbar"
 import PostItem from "../../components/PostItem"
 
 const Home = () => {

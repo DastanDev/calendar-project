@@ -1,8 +1,4 @@
 import React from "react"
-import Input from "../../StyledCompoents/Input"
-import Select from "../../StyledCompoents/Select"
-import Textarea from "../../StyledCompoents/Textarea"
-import Button from "../../StyledCompoents/Button"
 
 const Register = () => {
   return (
