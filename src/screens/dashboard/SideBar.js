@@ -7,6 +7,7 @@ const SideBar = () => {
     <div className="hidden max-h-screen space-y-2 overflow-y-scroll hide-scroll text-white bg-primary  font-semibold text-lg flex-col lg:flex lg:p-5 lg:w-3/12 ">
       <RouteItem name="calendar" Logo={FaTachometerAlt} />
       <RouteItem name="Noticas" Logo={FaTachometerAlt} />
+      <RouteItem name="Class-Room" Logo={FaTachometerAlt} />
     </div>
   )
 }

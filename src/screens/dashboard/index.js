@@ -4,6 +4,7 @@ import { Route } from "react-router-dom"
 import Calendar from "../../screens/calendar/index"
 import User from "../../screens/user"
 import Noticas from "../../screens/noticas/index"
+import Classroom from "../classrom"
 
 const Dashboard = ({ children, title }) => {
   return (
@@ -14,6 +15,7 @@ const Dashboard = ({ children, title }) => {
         <Route exact path="/dashboard/calendar" component={Calendar} />
         <Route exact path="/dashboard/user" component={User} />
         <Route exact path="/dashboard/noticas" component={Noticas} />
+        <Route exact path="/dashboard/class-room" component={Classroom} />
       </div>
     </div>
   )

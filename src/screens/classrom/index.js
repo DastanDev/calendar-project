@@ -4,11 +4,6 @@ import UserCard from "../../components/UserCard"
 const index = () => {
   return (
     <div className="flex flex-col lg:flex-row lg:space-x-5 p-5 bg-gray-100 justify-evenly place-items-center ">
-      <UserCard
-        name="John Doe"
-        email="johnDoe@gmail.com"
-        phone="+44 234 5678"
-      />
       <div className=" flex flex-col text-sm bg-white ring-1 ring-gray-200 rounded-lg mt-5 lg:mt-0 shadow-lg hover:shadow-2xl duration-200 ">
         <div className="flex flex-col sm:flex-row p-5 relative">
           <img
