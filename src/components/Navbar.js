@@ -2,10 +2,10 @@ import React, { useContext } from "react"
 import { Link } from "react-router-dom"
 import { UserContext } from "../contexts/UserContext"
 
-const Navbar = () => {
+const Navbar = ({ className }) => {
   const { user, logout } = useContext(UserContext)
   return (
-    <div className="overflow-hidden">
+    <div className={`overflow-hidden ${className}`}>
       <div className="bg-primary">
         <div className=" flex px-5 py-2 max-w-7xl mx-auto justify-between text-white text-xs sm:text-sm ">
           <div className="flex place-items-center space-x-1 sm:space-x-5">

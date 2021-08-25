@@ -4,7 +4,7 @@ import { Route } from "react-router-dom"
 import Calendar from "../../screens/calendar/index"
 import User from "../../screens/user"
 import Noticas from "../../screens/noticas/index"
-import Classroom from "../classrom"
+import Classroom from "../classroom"
 
 const Dashboard = ({ children, title }) => {
   return (

@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <>
       <div className="relative bg-primary h-96 p-5 text-white">
-        <div className=" absolute flex flex-col left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-32 text-4xl sm:text-5xl font-bold text-center ">
+        <div className="z-10 absolute flex flex-col left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-32 text-4xl sm:text-5xl font-bold text-center ">
           <h2>BANCO DE DESARROLLO PRODUCTIVO</h2>
           <hr className="text-white mt-5 border-b-2 w-20 mx-auto" />
           <h2 className="text-xl mt-2">SUBTITLE</h2>
@@ -39,6 +39,10 @@ const Home = () => {
             </button>
           </div>
         </div>
+        <img
+          className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full object-cover z-0 h-96"
+          src="https://mocah.org/uploads/posts/5413445-path-tree-trail-palm-green-nature-garden-tropical-greenery-outdoor-outside-road-palm-tree-walk-wandering-journey-florida-tampa-sand-shell-free-pictures.jpg"
+        />
       </div>
 
       <div className="flex flex-col w-full p-5 max-w-5xl mx-auto">
@@ -51,20 +55,22 @@ const Home = () => {
           proident, sunt in culpa qui officia deserunt mollit anim id est
           laborum.
         </p>
-        {news?.map((post, _idx) => (
-          <>
-            <PostItem
-              key={post.id}
-              img={post.image}
-              date={Date.now()}
-              description={post.description}
-              tag={post.tag}
-              title={post.title}
-              author="john doe"
-            />
-            <hr className="my-5" />
-          </>
-        ))}
+        <div className="text-red-500 text-xs">{error}</div>
+        {news?.map((post, _idx) => {
+          return (
+            <React.Fragment key={post.id}>
+              <PostItem
+                img={post.image}
+                date={Date.now()}
+                description={post.description}
+                tag={post.tag}
+                title={post.title}
+                author="john doe"
+              />
+              <hr className="my-5" />
+            </React.Fragment>
+          )
+        })}
 
         <h2 className="font-bold text-center text-3xl mb-7 mt-2">
           Older Posts

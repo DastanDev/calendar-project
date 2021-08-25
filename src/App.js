@@ -40,7 +40,7 @@ function App() {
                   rel="stylesheet"
                 />
 
-                <Navbar />
+                <Navbar className="sticky top-0 z-20" />
                 <Route exact path="/" component={Home} />
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/register" component={Register} />

@@ -30,7 +30,7 @@ const Login = () => {
     if (user?.email) {
       history.push("/dashboard/noticas")
     }
-  }, [user])
+  }, [user, history])
 
   return (
     <>

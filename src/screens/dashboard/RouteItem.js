@@ -1,8 +1,8 @@
-import React, {  useState } from "react"
+import React, { useState } from "react"
 import { Link } from "react-router-dom"
 
 const RouteItem = ({ name, Logo, history }) => {
-  const [isAcitvePage, setIsActivePage] = useState(false)
+  const [isAcitvePage] = useState(false)
 
   return (
     <Link
