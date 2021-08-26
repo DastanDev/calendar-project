@@ -34,25 +34,25 @@ const Navbar = ({ className }) => {
               to="/"
               className="flex place-items-center hover:opacity-70 duration-200 invisible lg:visible"
             >
-              HOME
+              Home
             </Link>
             <Link
               to="/"
               className="flex place-items-center hover:opacity-70 duration-200 invisible lg:visible"
             >
-              ABOUT US
+              About us
             </Link>
             <Link
               to="/"
               className="flex place-items-center hover:opacity-70 duration-200 invisible lg:visible"
             >
-              CONTACT US
+              Contact us
             </Link>
             <Link
               to="/terms"
               className="flex place-items-center hover:opacity-70 duration-200 invisible lg:visible"
             >
-              TERMS
+              Terms
             </Link>
           </div>
           <i className="fas sm:invisible sm:hidden fa-bars text-xl cursor-pointer"></i>

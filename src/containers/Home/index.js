@@ -50,7 +50,7 @@ const Home = () => {
         />
       </div>
 
-      <div className="flex flex-col w-full p-5 max-w-5xl mx-auto">
+      <div className="flex flex-col w-full p-5 max-w-6xl mx-auto">
         <h2 className=" text-center text-4xl mb-7 mt-2 font-semibold">
           Recent Posts
         </h2>
@@ -98,7 +98,7 @@ const Home = () => {
         </p>
         <div className="grid grid-cols-12 gap-5">
           <OlderPostItem
-            className="col-span-12 md:col-span-4"
+            className="col-span-12 lg:col-span-4"
             img="https://mdbootstrap.com/img/Photos/Others/img (39).jpg"
             date="26/08/2016"
             description="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -107,7 +107,7 @@ const Home = () => {
             author="Jessica Clark"
           />
           <OlderPostItem
-            className="col-span-12 sm:col-span-6 md:col-span-4"
+            className="col-span-12 sm:col-span-6 lg:col-span-4"
             img="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(131).jpg"
             date="26/08/2016"
             description="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -116,7 +116,7 @@ const Home = () => {
             author="Jessica Clark"
           />
           <OlderPostItem
-            className="col-span-12 sm:col-span-6 md:col-span-4"
+            className="col-span-12 sm:col-span-6 lg:col-span-4"
             img="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
             date="26/08/2016"
             description="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
