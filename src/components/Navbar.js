@@ -5,27 +5,38 @@ import { UserContext } from "../contexts/UserContext"
 const Navbar = ({ className }) => {
   const { user, logout } = useContext(UserContext)
   return (
-    <div className={`overflow-hidden ${className}`}>
-      <div className="bg-primary">
-        <div className=" flex px-5 py-2 max-w-7xl mx-auto justify-between text-white text-xs sm:text-sm ">
-          <div className="flex place-items-center space-x-1 sm:space-x-5">
-            <Link to="/" className="flex place-items-center">
+    <div className={`overflow-hidden  ${className}`}>
+      <div className="bg-primary ">
+        <div className=" flex px-5 h-16 py-2 max-w-7xl mx-auto justify-between place-items-center text-md text-white ">
+          <div className="place-items-center space-x-1 sm:space-x-5 flex">
+            <Link
+              to="/"
+              className="flex place-items-center font-bold text-lg hover:opacity-70 duration-200"
+            >
               MDB
             </Link>
-            <div>|</div>
-            <Link to="/" className="flex place-items-center">
+            <Link
+              to="/"
+              className="flex place-items-center hover:opacity-70 duration-200 invisible lg:visible"
+            >
               HOME
             </Link>
-            <div>|</div>
-            <Link to="/" className="flex place-items-center">
+            <Link
+              to="/"
+              className="flex place-items-center hover:opacity-70 duration-200 invisible lg:visible"
+            >
               ABOUT US
             </Link>
-            <div>|</div>
-            <Link to="/" className="flex place-items-center">
+            <Link
+              to="/"
+              className="flex place-items-center hover:opacity-70 duration-200 invisible lg:visible"
+            >
               CONTACT US
             </Link>
-            <div>|</div>
-            <Link to="/terms" className="flex place-items-center">
+            <Link
+              to="/terms"
+              className="flex place-items-center hover:opacity-70 duration-200 invisible lg:visible"
+            >
               TERMS
             </Link>
           </div>
@@ -33,10 +44,13 @@ const Navbar = ({ className }) => {
           <div className="sm:flex hidden place-items-center space-x-4">
             {!user?.email ? (
               <>
-                <Link className="" to="/login">
+                <Link className="hover:opacity-70 duration-200" to="/login">
                   Login
                 </Link>
-                <Link className="" to="/register">
+                <Link
+                  className="hover:opacity-70 duration-200 bg-blue-secondary px-3 py-2"
+                  to="/register"
+                >
                   Register
                 </Link>
               </>

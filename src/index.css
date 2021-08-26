@@ -6,6 +6,10 @@
   background-color: #114861;
 }
 
+.bg-blue-secondary {
+  background-color: #295b71;
+}
+
 input:checked + svg {
   display: block;
 }
@@ -19,4 +23,16 @@ input:checked + svg {
 .hide-scroll {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.font-roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.bg-yellow-primary {
+  background-color: #ffa742;
 }

@@ -7,12 +7,15 @@ const Footer = () => {
   return (
     <div className="bg-primary w-full">
       <footer className=" h-44 max-w-4xl px-5 sm:space-y-0 space-y-10 justify-center sm:text-xl sm:justify-between flex-col sm:flex-row text-white mx-auto w-full flex place-items-center ">
-        <div className="">© 2021 Copyright: Ventse</div>{" "}
-        <div className="space-x-5">
-          <i className="fab fa-linkedin"></i>
-          <i className="fab fa-facebook"></i>
-          <i className="fab fa-google-plus-g"></i>
-          <i className="fab fa-twitter"></i>
+        <div className="text-gray-500">
+          © 2021 Copyright:
+          <span className="text-white font-semibold ml-1">Ventse</span>
+        </div>{" "}
+        <div className="space-x-5 text-2xl">
+          <i className="fab fa-linkedin hover:text-gray-500 cursor-pointer duration-200"></i>
+          <i className="fab fa-facebook hover:text-gray-500 cursor-pointer duration-200"></i>
+          <i className="fab fa-google-plus-g hover:text-gray-500 cursor-pointer duration-200"></i>
+          <i className="fab fa-twitter hover:text-gray-500 cursor-pointer duration-200"></i>
         </div>
       </footer>
     </div>
