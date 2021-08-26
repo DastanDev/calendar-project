@@ -48,3 +48,7 @@ input:checked + svg {
 .bg-green-primary {
   background-color: #83b283;
 }
+
+.bg-gray-primary {
+  background-color: #eeeeee;
+}

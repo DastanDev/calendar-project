@@ -19,7 +19,7 @@ const OlderPostItem = ({
         src={img}
         alt={title}
       />
-      <div className="flex flex-col place-items-center space-y-4 sm:items-start sm:ml-3">
+      <div className="flex flex-col place-items-center space-y-4 sm:ml-3">
         <div className=" flex justify-center mt-5 text-green-600 font-semibold space-x-2 cursor-pointer place-items-center">
           <i className="fas fa-heart"></i>
           <p>{tag}</p>

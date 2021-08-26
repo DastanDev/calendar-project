@@ -19,7 +19,7 @@ const Navbar = ({ className, setShowSideNav }) => {
     <div className={`overflow-hidden z-30  ${className}`}>
       <div className="bg-primary">
         <div
-          className={` flex px-5 py-2 duration-700 max-w-7xl mx-auto justify-between place-items-center text-md text-white ${
+          className={` flex px-5 py-2 duration-700 max-w-6xl mx-auto justify-between place-items-center text-md text-white ${
             isScrolled ? "h-12" : "h-16"
           }`}
         >
@@ -40,13 +40,13 @@ const Navbar = ({ className, setShowSideNav }) => {
               to="/"
               className="flex place-items-center hover:opacity-70 duration-200 invisible lg:visible"
             >
-              About us
+              About Us
             </Link>
             <Link
               to="/"
               className="flex place-items-center hover:opacity-70 duration-200 invisible lg:visible"
             >
-              Contact us
+              Contact Us
             </Link>
             <Link
               to="/terms"

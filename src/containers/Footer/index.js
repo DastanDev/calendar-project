@@ -6,8 +6,8 @@ const Footer = () => {
   //console.log("Test", t('welcome.title', {framework:'React'}))
   return (
     <div className="bg-primary w-full">
-      <footer className=" h-44 max-w-4xl px-5 sm:space-y-0 space-y-10 justify-center sm:text-xl sm:justify-between flex-col sm:flex-row text-white mx-auto w-full flex place-items-center ">
-        <div className="text-gray-500">
+      <footer className=" h-32 max-w-6xl px-6 sm:space-y-0 space-y-10 justify-center sm:text-xl sm:justify-between flex-col sm:flex-row text-white mx-auto w-full flex place-items-center ">
+        <div className="text-gray-500 text-base">
           © 2021 Copyright:
           <span className="text-white font-semibold ml-1">Ventse</span>
         </div>{" "}

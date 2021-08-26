@@ -26,8 +26,8 @@ const Home = () => {
     getNewsFromBackend()
   }, [])
   return (
-    <>
-      <div className="relative bg-primary h-96 p-5 text-white">
+    <div div className="bg-gray-primary">
+      <div className="relative bg-primary h-96 p-5 text-white bg-gray-primary">
         <div className="z-10 absolute flex flex-col left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-32 text-4xl sm:text-5xl font-normal text-center ">
           <h2>BANCO DE DESARROLLO PRODUCTIVO</h2>
           <hr className="text-white mt-5 border-b-2 w-20 mx-auto" />
@@ -50,7 +50,7 @@ const Home = () => {
         />
       </div>
 
-      <div className="flex flex-col w-full p-5 max-w-6xl mx-auto">
+      <div className="flex flex-col w-full p-5 max-w-6xl mx-auto bg-gray-primary">
         <h2 className=" text-center text-4xl mb-7 mt-2 font-semibold">
           Recent Posts
         </h2>
@@ -126,7 +126,7 @@ const Home = () => {
           />
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
