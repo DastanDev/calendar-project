@@ -36,3 +36,11 @@ input:checked + svg {
 .bg-yellow-primary {
   background-color: #ffa742;
 }
+
+.bg-red-primary {
+  background-color: #c48686;
+}
+
+.bg-green-primary {
+  background-color: #83b283;
+}

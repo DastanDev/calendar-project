@@ -4,6 +4,7 @@ import { baseUrl } from "../../baseUrl"
 import { UserContext } from "../../contexts/UserContext"
 import { useHistory } from "react-router-dom"
 import Input from "../../components/Input"
+import Select from "../../components/Select"
 
 const Register = () => {
   const [inputs, setInputs] = useState({
@@ -52,10 +53,10 @@ const Register = () => {
       />
       <form
         onSubmit={submitHandler}
-        class="bg-gray-300 flex flex-col w-full h-screen z-10"
+        className="bg-gray-300 flex flex-col h-screen z-10"
       >
-        <div class="flex flex-col sm:flex-row mx-auto z-10 mt-20">
-          <div class="flex flex-col mb-12 px-5 max-w-xl mx-auto text-sm space-y-3">
+        <div className="flex flex-col sm:flex-row mx-auto z-10 mt-20">
+          <div className="flex flex-col mb-12 px-5 max-w-4xl mx-auto text-sm space-y-3">
             <Input
               onChange={(e) =>
                 setInputs((prev) => ({ ...prev, firstName: e.target.value }))
@@ -65,9 +66,8 @@ const Register = () => {
               type="text"
             />
 
-            <div class="flex space-x-1">
+            <div className="flex space-x-1">
               <Input
-                class="px-5 w-1/2 py-2 rounded-sm outline-none"
                 placeholder="apellido"
                 type="text"
                 onChange={(e) =>
@@ -76,7 +76,6 @@ const Register = () => {
                 value={inputs.lastName}
               />
               <Input
-                class="px-5 w-1/2 py-2 rounded-sm outline-none"
                 placeholder="Email"
                 type="text"
                 onChange={(e) =>
@@ -85,33 +84,34 @@ const Register = () => {
                 value={inputs.email}
               />
             </div>
-            <div class="flex space-x-1">
-              <select class="w-1/3 rounded-sm h-8" name="select" id="">
+            <div className="flex space-x-1">
+              <Select>
                 <option>Departamento</option>
-              </select>
-              <select class="w-1/3 rounded-sm h-8" name="select" id="">
+              </Select>
+
+              <Select className="w-1/3 rounded-md h-8" name="select" id="">
                 <option>Departamento</option>
-              </select>
-              <select class="w-1/3 rounded-sm h-8" name="select" id="">
+              </Select>
+              <Select className="w-1/3 rounded-md h-8" name="select" id="">
                 <option>Departamento</option>
-              </select>
+              </Select>
             </div>
-            <div class="flex space-x-1">
+            <div className="flex space-x-1 place-items-center">
               <Input
-                class="px-5 py-2 rounded-sm outline-none w-2/4"
+                className="px-5 py-2 rounded-sm outline-none w-2/4"
                 placeholder="Cédula de Identidad"
                 type="text"
               />
-              <select class="w-1/4 rounded-sm" name="select" id="">
+              <Select className="w-1/4 rounded-sm" name="select" id="">
                 <option>Extensión</option>
-              </select>
-              <select class="w-1/4 rounded-sm" name="select" id="">
+              </Select>
+              <Select className="w-1/4 rounded-sm" name="select" id="">
                 <option>Estado Civil</option>
-              </select>
+              </Select>
             </div>
-            <div class="flex space-x0">
+            <div className="flex space-x-2 place-items-center">
               <Input
-                class="px-5 py-2 rounded-sm outline-none w-2/4"
+                className="px-5 py-2 rounded-sm outline-none w-2/4"
                 placeholder="Fecha de Nacimiento"
                 type="date"
                 onChange={(e) =>
@@ -119,15 +119,15 @@ const Register = () => {
                 }
                 value={inputs.birthday}
               />
-              <select class="w-1/4 rounded-sm" name="select" id="">
+              <Select className="w-1/4 rounded-sm" name="select" id="">
                 <option>Edad</option>
-              </select>
-              <select class="w-1/4 rounded-sm" name="select" id="">
+              </Select>
+              <Select className="w-1/4 rounded-sm" name="select" id="">
                 <option>Rango</option>
-              </select>
+              </Select>
             </div>
             <Input
-              class="px-5 py-2 rounded-sm outline-none"
+              className="px-5 py-2 rounded-sm outline-none"
               placeholder="Profesión / Ocupación"
               type="text"
               onChange={(e) =>
@@ -135,9 +135,9 @@ const Register = () => {
               }
               value={inputs.profession}
             />
-            <div class="flex space-x-1">
+            <div className="flex space-x-1">
               <Input
-                class="px-5 py-2 rounded-sm outline-none w-1/2"
+                className="px-5 py-2 rounded-sm outline-none w-1/2"
                 placeholder="Correo Electrónico"
                 type="password"
                 onChange={(e) =>
@@ -146,7 +146,7 @@ const Register = () => {
                 value={inputs.password}
               />
               <Input
-                class="px-5 py-2 rounded-sm outline-none w-1/2"
+                className="px-5 py-2 rounded-sm outline-none w-1/2"
                 placeholder="Teléfono / Celular"
                 type="number"
                 onChange={(e) =>
@@ -156,7 +156,7 @@ const Register = () => {
               />
             </div>
             <Input
-              class="px-5 py-2 rounded-sm outline-none"
+              className="px-5 py-2 rounded-sm outline-none"
               placeholder="Género"
               type="text"
               onChange={(e) =>
@@ -165,7 +165,7 @@ const Register = () => {
               value={inputs.gender}
             />
             <Input
-              class="px-5 py-2 rounded-sm outline-none"
+              className="px-5 py-2 rounded-sm outline-none"
               placeholder="Grado Académico"
               type="text"
               onChange={(e) =>
@@ -174,12 +174,12 @@ const Register = () => {
               value={inputs.degree}
             />
           </div>
-          <div class="flex flex-col space-y-1 max-h-full h-full mx-5 -mt-10 sm:mt-0">
+          <div className="flex flex-col space-y-1 max-h-full h-full mx-5 -mt-10 sm:mt-0">
             <textarea
               placeholder="Descripción del Emprendimiento"
-              class="outline-none p-2 rounded-md"
+              className="outline-none p-2 rounded-md w-full"
               cols="30"
-              rows="10"
+              rows="7"
               onChange={(e) =>
                 setInputs((prev) => ({
                   ...prev,
@@ -190,9 +190,13 @@ const Register = () => {
             ></textarea>
           </div>
         </div>
-        <div class="px-5 flex space-x-1 mt-5 sm:mt-0 mx-auto">
-          <button class="bg-green-500 px-5 py-1 rounded-sm">Accept</button>
-          <button class="bg-red-500 px-5 py-1 rounded-sm">Cancel</button>
+        <div className="px-5 flex space-x-1 mt-5 sm:mt-0 mx-auto z-10">
+          <button className="bg-green-primary px-10 py-3 rounded-sm z-10 text-white">
+            Accept
+          </button>
+          <button className="bg-red-primary px-10 py-3 rounded-sm z-10 text-white">
+            Cancel
+          </button>
         </div>
       </form>
     </div>
