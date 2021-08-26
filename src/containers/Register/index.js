@@ -49,7 +49,7 @@ const Register = () => {
       <img
         className="absolute top-0 h-full object-cover w-full z-0"
         src="https://i.ibb.co/d5wsFD3/wp.jpg"
-        alt="image"
+        alt="bg"
       />
       <form
         onSubmit={submitHandler}

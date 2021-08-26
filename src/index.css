@@ -10,6 +10,10 @@
   background-color: #295b71;
 }
 
+.hover\:bg-blue-secondary:hover {
+  background-color: #295b71;
+}
+
 input:checked + svg {
   display: block;
 }

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Home from "./containers/Home"
 import Footer from "./containers/Footer"
 import Login from "./containers/Login"
@@ -13,6 +13,7 @@ import en from "./common/translations/en.json"
 import Navbar from "./components/Navbar"
 import Dashboard from "./screens/dashboard/index"
 import UserProvider from "./contexts/UserContext"
+import SideNav from "./components/SideNav"
 
 i18n.init({
   interpolation: { escapeValue: false }, // React already does escaping
@@ -28,6 +29,7 @@ i18n.init({
 })
 
 function App() {
+  const [showSideNav, setShowSideNav] = useState(false)
   return (
     <UserProvider>
       <I18nextProvider i18n={i18n}>
@@ -50,7 +52,11 @@ function App() {
                   rel="stylesheet"
                 />
 
-                <Navbar className="sticky top-0 z-20" />
+                <Navbar
+                  setShowSideNav={setShowSideNav}
+                  className="sticky top-0 z-20"
+                />
+                <SideNav showSideNav={showSideNav} />
                 <Route exact path="/" component={Home} />
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/register" component={Register} />

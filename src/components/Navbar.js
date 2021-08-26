@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { UserContext } from "../contexts/UserContext"
 
-const Navbar = ({ className }) => {
+const Navbar = ({ className, setShowSideNav }) => {
   const { user, logout } = useContext(UserContext)
   const [isScrolled, setIsScrolled] = useState(false)
   useEffect(() => {
@@ -16,7 +16,7 @@ const Navbar = ({ className }) => {
   }, [isScrolled])
 
   return (
-    <div className={`overflow-hidden  ${className}`}>
+    <div className={`overflow-hidden z-30  ${className}`}>
       <div className="bg-primary">
         <div
           className={` flex px-5 py-2 duration-700 max-w-7xl mx-auto justify-between place-items-center text-md text-white ${
@@ -55,7 +55,10 @@ const Navbar = ({ className }) => {
               Terms
             </Link>
           </div>
-          <i className="fas sm:invisible sm:hidden fa-bars text-xl cursor-pointer"></i>
+          <i
+            onClick={() => setShowSideNav((prev) => !prev)}
+            className="fas sm:invisible sm:hidden fa-bars text-xl cursor-pointer"
+          ></i>
           <div className="sm:flex hidden place-items-center space-x-4">
             {!user?.email ? (
               <>
