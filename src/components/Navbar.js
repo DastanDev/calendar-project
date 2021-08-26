@@ -1,13 +1,28 @@
-import React, { useContext } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import { UserContext } from "../contexts/UserContext"
 
 const Navbar = ({ className }) => {
   const { user, logout } = useContext(UserContext)
+  const [isScrolled, setIsScrolled] = useState(false)
+  useEffect(() => {
+    window.onscroll = () => {
+      if (document.documentElement.scrollTop > 200) {
+        setIsScrolled(true)
+      } else {
+        setIsScrolled(false)
+      }
+    }
+  }, [isScrolled])
+
   return (
     <div className={`overflow-hidden  ${className}`}>
-      <div className="bg-primary ">
-        <div className=" flex px-5 h-16 py-2 max-w-7xl mx-auto justify-between place-items-center text-md text-white ">
+      <div className="bg-primary">
+        <div
+          className={` flex px-5 py-2 duration-700 max-w-7xl mx-auto justify-between place-items-center text-md text-white ${
+            isScrolled ? "h-12" : "h-16"
+          }`}
+        >
           <div className="place-items-center space-x-1 sm:space-x-5 flex">
             <Link
               to="/"
