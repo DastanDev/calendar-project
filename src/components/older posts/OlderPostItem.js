@@ -41,7 +41,7 @@ const OlderPostItem = ({
             , {dayjs(date).fromNow(true)} ago
           </span>
         </p>
-        <button className="bg-yellow-primary w-max mx-auto mt-2 rounded-sm sm:mx-0 px-7 py-3 text-sm text-white shadow-md hover:shadow-xl duration-200">
+        <button className="bg-secondary w-max mx-auto mt-2 rounded-sm sm:mx-0 px-7 py-3 text-sm text-white shadow-md hover:shadow-xl duration-200">
           Read More
         </button>
       </div>

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .bg-primary {
-  background-color: #114861;
+  background-color: #014081;
 }
 
 .bg-blue-secondary {
@@ -12,6 +12,18 @@
 
 .hover\:bg-blue-secondary:hover {
   background-color: #295b71;
+}
+
+.bg-secondary {
+  background-color: #25b24b;
+}
+
+.text-secondary {
+  color: #25b24b;
+}
+
+.text-primary {
+  color: #014081;
 }
 
 input:checked + svg {

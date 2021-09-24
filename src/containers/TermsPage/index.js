@@ -55,8 +55,12 @@ const Terms = () => {
           deleniti totam voluptatum? Consectetur, explicabo repudiandae?!
         </p>
         <div class="px-5 flex space-x-1 mt-5 sm:mt-7 mx-auto">
-          <button class="bg-green-500 px-5 py-1 rounded-sm">Accept</button>
-          <button class="bg-red-500 px-5 py-1 rounded-sm">Cancel</button>
+          <button class="bg-secondary text-white hover:bg-gray-900 duration-200 px-5 py-1 rounded-sm">
+            Accept
+          </button>
+          <button class="bg-red-500 hover:bg-red-900 text-white duration-200 px-5 py-1 rounded-sm">
+            Cancel
+          </button>
         </div>
       </div>
     </>

@@ -25,7 +25,7 @@ const index = () => {
                 <p className="text-base text-gray-500 font-semibold">4.3</p>
               </div>
             </div>
-            <button className=" absolute bottom-5 right-5 bg-gray-500 px-5 py-1 rounded text-white hover:bg-gray-700 duration-200 ">
+            <button className=" absolute bottom-5 right-5 bg-secondary px-5 py-1 rounded text-white hover:bg-gray-700 duration-200 ">
               ASISTIR
             </button>
           </div>
@@ -52,7 +52,7 @@ const index = () => {
                 <p className="text-base text-gray-500 font-semibold">4.3</p>
               </div>
             </div>
-            <button className=" absolute bottom-5 right-5 bg-gray-500 px-5 py-1 rounded text-white hover:bg-gray-700 duration-200 ">
+            <button className=" absolute bottom-5 right-5 bg-secondary px-5 py-1 rounded text-white hover:bg-gray-700 duration-200 ">
               ASISTIR
             </button>
           </div>
@@ -79,7 +79,7 @@ const index = () => {
                 <p className="text-base text-gray-500 font-semibold">4.3</p>
               </div>
             </div>
-            <button className=" absolute bottom-5 right-5 bg-gray-500 px-5 py-1 rounded text-white hover:bg-gray-700 duration-200 ">
+            <button className=" absolute bottom-5 right-5 bg-secondary px-5 py-1 rounded text-white hover:bg-gray-700 duration-200 ">
               ASISTIR
             </button>
           </div>
